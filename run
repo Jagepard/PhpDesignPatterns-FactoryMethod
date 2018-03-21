@@ -1,0 +1,13 @@
+#! usr/bin/env php
+<?php
+
+namespace Creational\FactoryMethod;
+
+require_once 'vendor/autoload.php';
+
+$factory = new FactoryMethod();
+$firstProduct  = $factory->getProduct(new FirstProduct());
+$secondProduct = $factory->getProduct(new SecondProduct());
+
+printf('%s' . PHP_EOL, $firstProduct->getClassName());
+printf('%s' . PHP_EOL, $secondProduct->getClassName());
