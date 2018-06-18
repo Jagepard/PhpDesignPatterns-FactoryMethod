@@ -10,20 +10,15 @@ declare(strict_types=1);
 namespace Creational\FactoryMethod;
 
 /**
- * Class FactoryMethod
+ * Class FactoryMethodInterface
  * @package Creational\FactoryMethod
  */
-class FactoryMethod implements FactoryMethodInterface
+interface FactoryMethodInterface
 {
 
     /**
      * @param string $name
      * @return ProductInterface
      */
-    public function getProduct(string $name): ProductInterface
-    {
-        $product = __NAMESPACE__ . '\\' . $name;
-
-        return new $product();
-    }
+    public function getProduct(string $name): ProductInterface;
 }

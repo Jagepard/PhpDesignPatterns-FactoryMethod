@@ -6,8 +6,8 @@ namespace Creational\FactoryMethod;
 require_once 'vendor/autoload.php';
 
 $factory = new FactoryMethod();
-$firstProduct  = $factory->getProduct(new FirstProduct());
-$secondProduct = $factory->getProduct(new SecondProduct());
+$firstProduct  = $factory->getProduct('FirstProduct');
+$secondProduct = $factory->getProduct('SecondProduct');
 
 printf('%s' . PHP_EOL, $firstProduct->getClassName());
 printf('%s' . PHP_EOL, $secondProduct->getClassName());
