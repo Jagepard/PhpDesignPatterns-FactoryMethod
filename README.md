@@ -1,9 +1,9 @@
-[![Build Status](https://travis-ci.org/Jagepard/PhpDesignPatterns-AbstractFactory.svg?branch=master)](https://travis-ci.org/Jagepard/PhpDesignPatterns-AbstractFactory)
-[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/Jagepard/PhpDesignPatterns-AbstractFactory/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/Jagepard/PhpDesignPatterns-AbstractFactory/?branch=master)
-[![Maintainability](https://api.codeclimate.com/v1/badges/7a6e4faef5f3bedee182/maintainability)](https://codeclimate.com/github/Jagepard/PhpDesignPatterns-AbstractFactory/maintainability)
+[![Build Status](https://travis-ci.org/Jagepard/PhpDesignPatterns-FactoryMethod.svg?branch=master)](https://travis-ci.org/Jagepard/PhpDesignPatterns-FactoryMethod)
+[![codecov](https://codecov.io/gh/Jagepard/PhpDesignPatterns-FactoryMethod/branch/master/graph/badge.svg)](https://codecov.io/gh/Jagepard/PhpDesignPatterns-FactoryMethod)
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/Jagepard/PhpDesignPatterns-FactoryMethod/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/Jagepard/PhpDesignPatterns-FactoryMethod/?branch=master)
+[![Code Climate](https://codeclimate.com/github/Jagepard/PhpDesignPatterns-FactoryMethod/badges/gpa.svg)](https://codeclimate.com/github/Jagepard/PhpDesignPatterns-FactoryMethod)
+[![License: MIT](https://img.shields.io/badge/license-MIT-498e7f.svg)](https://mit-license.org/)
+-----
 
-![AbstractFactory](https://github.com/Jagepard/PhpDesignPatterns-AbstractFactory/blob/master/AbstractFactory.png?raw=true "AbstractFactory")
-
-
-# AbstractFactory
-Абстрактная фабрика
+# FactoryMethod
+Фабричный Метод
