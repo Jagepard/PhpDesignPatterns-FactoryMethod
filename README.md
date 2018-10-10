@@ -7,3 +7,5 @@
 
 # FactoryMethod | [API](https://github.com/Jagepard/PhpDesignPatterns-FactoryMethod/blob/master/docs.md "Documentation API")
 Фабричный Метод
+
+![FactoryMethod](https://github.com/Jagepard/PhpDesignPatterns-FactoryMethod/blob/master/UML.png)
