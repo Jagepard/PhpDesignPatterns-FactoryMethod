@@ -15,7 +15,6 @@ namespace Creational\FactoryMethod;
  */
 class SecondProduct implements ProductInterface
 {
-
     /**
      * @return string
      */
