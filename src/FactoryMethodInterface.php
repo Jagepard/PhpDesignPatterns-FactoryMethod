@@ -15,10 +15,9 @@ namespace Creational\FactoryMethod;
  */
 interface FactoryMethodInterface
 {
-
     /**
-     * @param string $name
+     * @param string $product
      * @return ProductInterface
      */
-    public function getProduct(string $name): ProductInterface;
+    public function create(string $product): ProductInterface;
 }
