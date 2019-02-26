@@ -15,7 +15,6 @@ namespace Creational\FactoryMethod;
  */
 class FirstProduct implements ProductInterface
 {
-
     /**
      * @return string
      */

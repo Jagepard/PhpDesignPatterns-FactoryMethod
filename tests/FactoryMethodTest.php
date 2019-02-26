@@ -21,11 +21,10 @@ use PHPUnit\Framework\TestCase as PHPUnit_Framework_TestCase;
  */
 class FactoryMethodTest extends PHPUnit_Framework_TestCase
 {
-
     /**
-     * @var FactoryMethod
+     * @var FactoryMethodInterface
      */
-    protected $factory;
+    private $factory;
 
     protected function setUp(): void
     {
@@ -34,14 +33,22 @@ class FactoryMethodTest extends PHPUnit_Framework_TestCase
 
     public function testProducts()
     {
-        $this->assertEquals($this->factory->getProduct('FirstProduct')->getClassName(), FirstProduct::class);
-        $this->assertEquals($this->factory->getProduct('SecondProduct')->getClassName(), SecondProduct::class);
+        $this->assertEquals($this->getFactory()->create(FirstProduct::class)->getClassName(), FirstProduct::class);
+        $this->assertEquals($this->getFactory()->create(SecondProduct::class)->getClassName(), SecondProduct::class);
     }
 
     public function testFactoryMethod()
     {
-        $this->assertInstanceOf(FactoryMethodInterface::class, $this->factory);
-        $this->assertInstanceOf(ProductInterface::class, $this->factory->getProduct('FirstProduct'));
-        $this->assertInstanceOf(ProductInterface::class, $this->factory->getProduct('SecondProduct'));
+        $this->assertInstanceOf(FactoryMethodInterface::class, $this->getFactory());
+        $this->assertInstanceOf(ProductInterface::class, $this->getFactory()->create(FirstProduct::class));
+        $this->assertInstanceOf(ProductInterface::class, $this->getFactory()->create(SecondProduct::class));
+    }
+
+    /**
+     * @return FactoryMethod
+     */
+    public function getFactory(): FactoryMethodInterface
+    {
+        return $this->factory;
     }
 }
