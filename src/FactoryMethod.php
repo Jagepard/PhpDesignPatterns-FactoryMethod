@@ -15,15 +15,12 @@ namespace Creational\FactoryMethod;
  */
 class FactoryMethod implements FactoryMethodInterface
 {
-
     /**
-     * @param string $name
+     * @param string $product
      * @return ProductInterface
      */
-    public function getProduct(string $name): ProductInterface
+    public function create(string $product): ProductInterface
     {
-        $product = __NAMESPACE__ . '\\' . $name;
-
         return new $product();
     }
 }
