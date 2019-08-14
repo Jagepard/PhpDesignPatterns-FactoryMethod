@@ -9,10 +9,6 @@ declare(strict_types=1);
 
 namespace Creational\FactoryMethod;
 
-/**
- * Class FactoryMethod
- * @package Creational\FactoryMethod
- */
 class FactoryMethod implements FactoryMethodInterface
 {
     /**
@@ -21,6 +17,10 @@ class FactoryMethod implements FactoryMethodInterface
      */
     public function create(string $product): ProductInterface
     {
-        return new $product();
+        if (class_exists($product)) {
+            return new $product();
+        }
+
+        throw new \InvalidArgumentException("Class doesn't exist");
     }
 }
