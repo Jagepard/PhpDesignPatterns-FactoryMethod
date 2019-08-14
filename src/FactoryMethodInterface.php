@@ -9,10 +9,6 @@ declare(strict_types=1);
 
 namespace Creational\FactoryMethod;
 
-/**
- * Class FactoryMethodInterface
- * @package Creational\FactoryMethod
- */
 interface FactoryMethodInterface
 {
     /**
