@@ -16,9 +16,6 @@ use Creational\FactoryMethod\ProductInterface;
 use Creational\FactoryMethod\FactoryMethodInterface;
 use PHPUnit\Framework\TestCase as PHPUnit_Framework_TestCase;
 
-/**
- * Class FactoryMethodTest
- */
 class FactoryMethodTest extends PHPUnit_Framework_TestCase
 {
     /**

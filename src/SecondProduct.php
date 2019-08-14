@@ -9,10 +9,6 @@ declare(strict_types=1);
 
 namespace Creational\FactoryMethod;
 
-/**
- * Class SecondProduct
- * @package Creational\FactoryMethod
- */
 class SecondProduct implements ProductInterface
 {
     /**
