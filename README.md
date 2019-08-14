@@ -6,6 +6,8 @@
 -----
 
 # FactoryMethod | [API](https://github.com/Jagepard/PhpDesignPatterns-FactoryMethod/blob/master/docs.md "Documentation API")
+```php run``` Запустить исполнение шаблона в терминале
+
 Фабричный Метод
 
 ![FactoryMethod](https://github.com/Jagepard/PhpDesignPatterns-FactoryMethod/blob/master/UML.png)
