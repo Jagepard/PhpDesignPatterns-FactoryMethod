@@ -1,18 +1,16 @@
 <?php
 
-declare(strict_types=1);
-
 /**
- * @author    : Korotkov Danila <dankorot@gmail.com>
- * @license   https://mit-license.org/ MIT
+ * @author  : Jagepard <jagepard@yandex.ru>
+ * @license https://mit-license.org/ MIT
  */
 
 namespace Creational\FactoryMethod\Tests;
 
-use Creational\FactoryMethod\FirstProduct;
-use Creational\FactoryMethod\SecondProduct;
+use Creational\FactoryMethod\FirstAbstractProduct;
+use Creational\FactoryMethod\SecondAbstractProduct;
 use Creational\FactoryMethod\FactoryMethod;
-use Creational\FactoryMethod\ProductInterface;
+use Creational\FactoryMethod\AbstractProduct;
 use Creational\FactoryMethod\FactoryMethodInterface;
 use PHPUnit\Framework\TestCase as PHPUnit_Framework_TestCase;
 
@@ -30,22 +28,14 @@ class FactoryMethodTest extends PHPUnit_Framework_TestCase
 
     public function testProducts()
     {
-        $this->assertEquals($this->getFactory()->create(FirstProduct::class)->getClassName(), FirstProduct::class);
-        $this->assertEquals($this->getFactory()->create(SecondProduct::class)->getClassName(), SecondProduct::class);
+        $this->assertEquals($this->factory->create(FirstAbstractProduct::class)->getClassName(), FirstAbstractProduct::class);
+        $this->assertEquals($this->factory->create(SecondAbstractProduct::class)->getClassName(), SecondAbstractProduct::class);
     }
 
-    public function testFactoryMethod()
+    public function testInstances()
     {
-        $this->assertInstanceOf(FactoryMethodInterface::class, $this->getFactory());
-        $this->assertInstanceOf(ProductInterface::class, $this->getFactory()->create(FirstProduct::class));
-        $this->assertInstanceOf(ProductInterface::class, $this->getFactory()->create(SecondProduct::class));
-    }
-
-    /**
-     * @return FactoryMethod
-     */
-    public function getFactory(): FactoryMethodInterface
-    {
-        return $this->factory;
+        $this->assertInstanceOf(FactoryMethodInterface::class, $this->factory);
+        $this->assertInstanceOf(AbstractProduct::class, $this->factory->create(FirstAbstractProduct::class));
+        $this->assertInstanceOf(AbstractProduct::class, $this->factory->create(SecondAbstractProduct::class));
     }
 }

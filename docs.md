@@ -1,16 +1,23 @@
 ## Table of contents
 
-- [\Creational\FactoryMethod\ProductInterface (interface)](#interface-creationalfactorymethodproductinterface)
+- [\Creational\FactoryMethod\FirstAbstractProduct](#class-creationalfactorymethodfirstabstractproduct)
+- [\Creational\FactoryMethod\AbstractProduct (abstract)](#class-creationalfactorymethodabstractproduct-abstract)
+- [\Creational\FactoryMethod\SecondAbstractProduct](#class-creationalfactorymethodsecondabstractproduct)
 - [\Creational\FactoryMethod\FactoryMethod](#class-creationalfactorymethodfactorymethod)
 - [\Creational\FactoryMethod\FactoryMethodInterface (interface)](#interface-creationalfactorymethodfactorymethodinterface)
-- [\Creational\FactoryMethod\FirstProduct](#class-creationalfactorymethodfirstproduct)
-- [\Creational\FactoryMethod\SecondProduct](#class-creationalfactorymethodsecondproduct)
 
 <hr />
 
-### Interface: \Creational\FactoryMethod\ProductInterface
+### Class: \Creational\FactoryMethod\FirstAbstractProduct
 
-> Interface InterfaceProduct
+| Visibility | Function |
+|:-----------|:---------|
+
+*This class extends [\Creational\FactoryMethod\AbstractProduct](#class-creationalfactorymethodabstractproduct-abstract)*
+
+<hr />
+
+### Class: \Creational\FactoryMethod\AbstractProduct (abstract)
 
 | Visibility | Function |
 |:-----------|:---------|
@@ -18,13 +25,20 @@
 
 <hr />
 
-### Class: \Creational\FactoryMethod\FactoryMethod
-
-> Class FactoryMethod
+### Class: \Creational\FactoryMethod\SecondAbstractProduct
 
 | Visibility | Function |
 |:-----------|:---------|
-| public | <strong>getProduct(</strong><em>\string</em> <strong>$name</strong>)</strong> : <em>[\Creational\FactoryMethod\ProductInterface](#interface-creationalfactorymethodproductinterface)</em> |
+
+*This class extends [\Creational\FactoryMethod\AbstractProduct](#class-creationalfactorymethodabstractproduct-abstract)*
+
+<hr />
+
+### Class: \Creational\FactoryMethod\FactoryMethod
+
+| Visibility | Function |
+|:-----------|:---------|
+| public | <strong>create(</strong><em>\string</em> <strong>$product</strong>)</strong> : <em>[\Creational\FactoryMethod\AbstractProduct](#class-creationalfactorymethodabstractproduct-abstract)</em> |
 
 *This class implements [\Creational\FactoryMethod\FactoryMethodInterface](#interface-creationalfactorymethodfactorymethodinterface)*
 
@@ -32,33 +46,7 @@
 
 ### Interface: \Creational\FactoryMethod\FactoryMethodInterface
 
-> Class FactoryMethodInterface
-
 | Visibility | Function |
 |:-----------|:---------|
-| public | <strong>getProduct(</strong><em>\string</em> <strong>$name</strong>)</strong> : <em>[\Creational\FactoryMethod\ProductInterface](#interface-creationalfactorymethodproductinterface)</em> |
-
-<hr />
-
-### Class: \Creational\FactoryMethod\FirstProduct
-
-> Class FirstProduct
-
-| Visibility | Function |
-|:-----------|:---------|
-| public | <strong>getClassName()</strong> : <em>string</em> |
-
-*This class implements [\Creational\FactoryMethod\ProductInterface](#interface-creationalfactorymethodproductinterface)*
-
-<hr />
-
-### Class: \Creational\FactoryMethod\SecondProduct
-
-> Class SecondProduct
-
-| Visibility | Function |
-|:-----------|:---------|
-| public | <strong>getClassName()</strong> : <em>string</em> |
-
-*This class implements [\Creational\FactoryMethod\ProductInterface](#interface-creationalfactorymethodproductinterface)*
+| public | <strong>create(</strong><em>\string</em> <strong>$product</strong>)</strong> : <em>[\Creational\FactoryMethod\AbstractProduct](#class-creationalfactorymethodabstractproduct-abstract)</em> |
 

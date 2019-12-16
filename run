@@ -5,14 +5,14 @@ namespace Creational\FactoryMethod;
 
 require_once 'vendor/autoload.php';
 
-$factory       = new FactoryMethod();
+$factory = new FactoryMethod();
 
 try {
-    $firstProduct  = $factory->create(FirstProduct::class);
-    $secondProduct = $factory->create(SecondProduct::class);
+    $firstProduct = $factory->create(FirstAbstractProduct::class);
+    $secondProduct = $factory->create(SecondAbstractProduct::class);
 
-    printf('%s' . PHP_EOL, $firstProduct->getClassName());
-    printf('%s' . PHP_EOL, $secondProduct->getClassName());
-} catch (\Exception $e){
-    echo 'Caught exception: ',  $e->getMessage(), "\n";
+    printf('%s'.PHP_EOL, $firstProduct->getClassName());
+    printf('%s'.PHP_EOL, $secondProduct->getClassName());
+} catch (\Exception $e) {
+    echo 'Caught exception: ', $e->getMessage(), "\n";
 }
