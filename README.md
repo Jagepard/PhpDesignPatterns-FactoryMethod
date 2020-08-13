@@ -7,5 +7,3 @@
 
 # FactoryMethod | [API](https://github.com/Jagepard/PhpDesignPatterns-FactoryMethod/blob/master/docs.md "Documentation API")
 ```php run``` execute in terminal
-
-![FactoryMethod](https://github.com/Jagepard/PhpDesignPatterns-FactoryMethod/blob/master/UML.png)

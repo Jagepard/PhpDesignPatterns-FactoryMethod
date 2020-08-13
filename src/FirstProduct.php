@@ -7,6 +7,6 @@
 
 namespace Creational\FactoryMethod;
 
-class SecondAbstractProduct extends AbstractProduct
+class FirstProduct extends AbstractProduct
 {
 }
