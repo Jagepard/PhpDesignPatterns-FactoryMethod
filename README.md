@@ -8,7 +8,7 @@
 # FactoryMethod | [API](https://github.com/Jagepard/PhpDesignPatterns-FactoryMethod/blob/master/docs.md "Documentation API")
 ```php run``` execute in terminal
 
-##Result:
+## Result:
 ```
 Creational\FactoryMethod\FirstProduct
 Creational\FactoryMethod\SecondProduct
