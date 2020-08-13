@@ -7,19 +7,12 @@
 
 namespace Creational\FactoryMethod\Tests;
 
-use Creational\FactoryMethod\FirstAbstractProduct;
-use Creational\FactoryMethod\SecondAbstractProduct;
-use Creational\FactoryMethod\FactoryMethod;
-use Creational\FactoryMethod\AbstractProduct;
-use Creational\FactoryMethod\FactoryMethodInterface;
+use Creational\FactoryMethod\{FirstProduct, SecondProduct, FactoryMethod, AbstractProduct, FactoryMethodInterface};
 use PHPUnit\Framework\TestCase as PHPUnit_Framework_TestCase;
 
 class FactoryMethodTest extends PHPUnit_Framework_TestCase
 {
-    /**
-     * @var FactoryMethodInterface
-     */
-    private $factory;
+    private FactoryMethodInterface $factory;
 
     protected function setUp(): void
     {
@@ -28,14 +21,14 @@ class FactoryMethodTest extends PHPUnit_Framework_TestCase
 
     public function testProducts()
     {
-        $this->assertEquals($this->factory->create(FirstAbstractProduct::class)->getClassName(), FirstAbstractProduct::class);
-        $this->assertEquals($this->factory->create(SecondAbstractProduct::class)->getClassName(), SecondAbstractProduct::class);
+        $this->assertEquals(FirstProduct::class, $this->factory->create(FirstProduct::class)->getClassName());
+        $this->assertEquals(SecondProduct::class, $this->factory->create(SecondProduct::class)->getClassName());
     }
 
     public function testInstances()
     {
         $this->assertInstanceOf(FactoryMethodInterface::class, $this->factory);
-        $this->assertInstanceOf(AbstractProduct::class, $this->factory->create(FirstAbstractProduct::class));
-        $this->assertInstanceOf(AbstractProduct::class, $this->factory->create(SecondAbstractProduct::class));
+        $this->assertInstanceOf(AbstractProduct::class, $this->factory->create(FirstProduct::class));
+        $this->assertInstanceOf(AbstractProduct::class, $this->factory->create(SecondProduct::class));
     }
 }
