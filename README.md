@@ -6,7 +6,7 @@
 -----
 
 # FactoryMethod | [API](https://github.com/Jagepard/PhpDesignPatterns-FactoryMethod/blob/master/docs.md "Documentation API")
-```php run``` execute in terminal
+```php main.php``` execute in terminal
 
 ##Result:
 ```
