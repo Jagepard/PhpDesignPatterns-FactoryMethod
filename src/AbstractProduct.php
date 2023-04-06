@@ -11,6 +11,13 @@ namespace Creational\FactoryMethod;
 
 abstract class AbstractProduct
 {
+    /**
+     * Gets the class name
+     * ------------------------
+     * Получает название класса
+     *
+     * @return string
+     */
     public function getClassName(): string
     {
         return get_called_class();
