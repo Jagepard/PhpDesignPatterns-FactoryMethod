@@ -11,6 +11,14 @@ namespace Creational\FactoryMethod;
 
 class FactoryMethod implements FactoryMethodInterface
 {
+    /**
+     * Creates a product
+     * -----------------
+     * Создает продукт
+     *
+     * @param  string          $product
+     * @return AbstractProduct
+     */
     public function create(string $product): AbstractProduct
     {
         if (class_exists($product)) {
